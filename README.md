@@ -15,7 +15,7 @@ Frequency Shift Keying (FSK)
 
 Frequency Shift Keying (FSK) is a digital modulation technique in which the frequency of the carrier signal is changed according to the binary input data while amplitude remains constant. One frequency is used to represent binary ‘1’ and another frequency is used to represent binary ‘0’. FSK has better noise immunity and reliability compared to ASK, making it suitable for digital communication and wireless transmission systems.
 # ASK Program
-```
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.signal import butter, lfilter
@@ -43,8 +43,9 @@ decoded = (demod[::fs//br] > 0.25).astype(int)
 
 # Plot
 plt.figure(figsize=(10,9))
-plt.suptitle("NAME : Bharani Narrayanan R\nREG NO : 212224060040",
-             fontsize=12, fontweight='bold')    
+plt.suptitle("NAME : NAVEEN K\nREG NO : 212223060184",
+             fontsize=12, fontweight='bold')
+
 plt.subplot(4,1,1)
 plt.plot(t, msg)
 plt.title("Message Signal")
@@ -63,12 +64,13 @@ plt.title("Decoded Bits")
 
 plt.tight_layout(rect=[0,0,1,0.93])
 plt.show()
+
 ```
 # Output Waveform for ASK
-<img width="436" height="370" alt="WhatsApp Image 2026-05-11 at 10 43 13 AM" src="https://github.com/user-attachments/assets/a526fa6d-16f0-4238-8a83-0eeaafe3d91d" />
+<img width="1133" height="926" alt="image" src="https://github.com/user-attachments/assets/9eba84d7-3d97-4757-80e8-acdec204b55e" />
 
 # FSK Program
-```
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.signal import butter, lfilter
@@ -106,8 +108,8 @@ demod = np.repeat(dec, bd)
 
 # Plot
 plt.figure(figsize=(10,10))
-plt.suptitle("NAME : Bharani Narrayanan R\nREG NO : 212224060040",
-             fontsize=12, fontweight='bold')   
+plt.suptitle("NAME : NAVEEN K\nREG NO : 212223060184",
+             fontsize=12, fontweight='bold') 
 
 plt.subplot(5,1,1); plt.plot(t, msg); plt.title("Message Signal")
 plt.subplot(5,1,2); plt.plot(t, c1); plt.title("Carrier f1 (bit 0)")
@@ -117,10 +119,13 @@ plt.subplot(5,1,5); plt.plot(t, demod); plt.title("Demodulated Signal")
 
 plt.tight_layout(rect=[0,0,1,0.93])
 plt.show()
+
 ```
+
 # Output Waveform for FSK
-<img width="705" height="645" alt="WhatsApp Image 2026-05-11 at 10 48 01 AM" src="https://github.com/user-attachments/assets/ffde663c-f1ed-4dfc-b23c-a0607fab3186" />
+<img width="1030" height="936" alt="image" src="https://github.com/user-attachments/assets/08608302-557c-4fca-b820-8604c0f24206" />
+
+
 
 # Results
  The experiment of modulation and demodulation of ASK and FSK was successfully executed.
-
